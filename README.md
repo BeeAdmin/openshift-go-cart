@@ -1,7 +1,7 @@
 OpenShift Go Cartridge
 ======================
 
-**[Edit]** smarterclayton's cartridge updated to Go1.5.1; All credit goes to him for making the original cartridge
+**[Edit]** smarterclayton's cartridge updated to Go1.5.1; All credit goes to him for making the original cartridge.
 
 Runs [Go](http://golang.org) on [OpenShift](https://openshift.redhat.com/app/login) using downloadable cartridge support.  To install to OpenShift from the CLI (you'll need version 1.9 or later of rhc), run:
 
