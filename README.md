@@ -1,13 +1,15 @@
 OpenShift Go Cartridge
 ======================
 
+Edit; smarterclayton cartridge updated to Go1.5.1, All credits go to him for making the original cartridge
+
 Runs [Go](http://golang.org) on [OpenShift](https://openshift.redhat.com/app/login) using downloadable cartridge support.  To install to OpenShift from the CLI (you'll need version 1.9 or later of rhc), run:
 
-    rhc create-app mygo https://cartreflect-claytondev.rhcloud.com/reflect?github=smarterclayton/openshift-go-cart
+    rhc create-app mygo http://cartreflect-claytondev.rhcloud.com/github/beeadmin/openshift-go-cart?commit=master&r=1
 
 Once the app is created, you'll need to create and add a ".godir" file in your repo to tell the cartridge what the package of your Go code is.  A typical .godir file might contain:
 
-    github.com/smarterclayton/goexample
+    github.com/beeadmin/goexample
 
 which would tell OpenShift to place all of the files in the root of the Git repository inside of the <code>github.com/smarterclayton/goexample</code> package prior to compilation.
 
@@ -17,7 +19,7 @@ When you push code to the repo, the cart will compile your package into <code>$O
 
 If you want to serve web requests (vs. running in the background), you'll need to listen on the ip address and port that OpenShift allocates - those are available as OPENSHIFT_GO_IP and OPENSHIFT_GO_PORT in the environment.
 
-The repository contains a sample go file which will print "hello, world" when someone hits your web application - see [web.go](https://github.com/smarterclayton/openshift-go-cart/blob/master/template/web.go).
+The repository contains a sample go file which will print "hello, world" when someone hits your web application - see [web.go](https://github.com/beeadmin/openshift-go-cart/blob/master/template/web.go).
 
 Any log output will be generated to <code>$OPENSHIFT_GO_LOG_DIR</code>.
 
