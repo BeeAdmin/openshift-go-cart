@@ -5,7 +5,7 @@ Version: "1.5.1"
 Versions: ["1.5.1"]
 Website: https://github.com/BeeAdmin/openshift-go-cart
 Cartridge-Version: 0.0.1
-Cartridge-Vendor: beeadmin
+Cartridge-Vendor: Beeadmin
 Categories:
   - service
   - golang
